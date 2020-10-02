@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulas</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	 <h2 style="text-align: center; color: white; color: #407088; margin-top: 100px" id="intro">Hello, Please Click The Button Below To Get Started.</h2><hr style="width: 50%; border-color: #407088">
+	 <div style="text-align: center; margin-top: 2%">
+      <button class="btnsquare" onclick="getStarted()">GET STARTED</button>
+	 <h2 style="text-align: center; color: white; color: #407088; margin-top: 60px" id="display">Hello, Please Click The Buttons Below To Select The Shape You Want To Find Its Area.
+	 	<hr style="width: 70%; border-color: #407088">
+
+
+<br><div style="text-align: center; margin-top: 2%">
+<button class="btnsquare" onclick="square()">SQUARE</button>
+<button onclick="triangle()">TRIANGLE</button>
+<button class="btncircle" onclick="circle()">CIRCLE</button>
+</div>
+
+
+
+
+	
+
+
+
+
+
+	<script type="text/javascript">
+
+		
+		
+		function getStarted() {
+			var name;
+		    var name = window.prompt('Hi! Welcome Please What Is Your Name? ');
+
+
+			
+			if (name == '' ){
+				alert('Please Enter A Valid Name')
+			}else {
+				return document.getElementById('intro').innerHTML = 'Hello ' +name+ ' You Can Get Started By Following The Instructions Below'
+			}
+		}
+
+		
+
+		function square() {
+			var length, breath; 
+			var length = parseInt(window.prompt('Please What The Length Of The Square?'))
+			if (isNaN(length) || length == '') {
+				alert('Please Input A Valid Length')
+
+			}else if(true){
+			var breath = parseInt(window.prompt('Please What Is The Breath Of The Square?'))
+			}if (isNaN(breath) || breath == ''){
+				alert('Please Input A Valid breath')
+			}else {
+				let squareArea = length * breath;
+				return document.getElementById('display').innerHTML = 'The Area Of The Square is ' +squareArea+  ' cm Please Refresh The Page And Start Again'
+			}
+			}
+
+
+			function triangle() {
+			var base, height; 
+			var base = parseInt(window.prompt('Please What Is The Base Of The Triangle?'))
+			if (isNaN(base) || base == '') {
+				alert('Please Input A Valid Base')
+
+			}else if(true){
+			var height = parseInt(window.prompt('Please What The Height Of The Triangle?'))
+			}if (isNaN(height) || height == ''){
+				alert('Please Input A Height')
+			}else {
+				let triangleArea = 0.5 * base * height;
+				return document.getElementById('display').innerHTML = 'The Area Of The Triangle is ' +triangleArea+  ' cm Please Refresh The Page And Start Again'
+			}
+			}
+
+			function circle() {
+			var radius; 
+			var radius = parseInt(window.prompt('Please What Is The Radius Of The Circle?'))
+			if (isNaN(radius) || radius == '') {
+				alert('Please Input A Valid Radius')
+
+			}else {
+				let circleArea = 3.142 * radius * radius;
+				return document.getElementById('display').innerHTML = 'The Area Of The Circle is ' +circleArea+  ' cm Please Refresh The Page And Start Again'
+			}
+			}
+
+		
+			
+			
+		
+	</script>
+</body>
+</html>
